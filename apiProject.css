@@ -1,0 +1,51 @@
+.wrapper {
+    background-image: url("https://images.unsplash.com/photo-1516542203310-499413ef31ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 90vw;
+    border-radius: 5px;
+    padding: 3vh;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+form {
+    width: 60vw;
+    margin: 0 auto;
+}
+body {
+    background: #fccf46;
+    font-family: 'apiFont';
+} 
+
+
+
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: white;
+    font-size: 5vw;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    font-family: 'apiFontBold';
+}
+select {
+    margin-bottom: 2vh;  
+}
+input {
+    margin-bottom: 2vh;  
+}
+
+@font-face {
+    font-family: 'apiFont';
+    src: url('api_fonts/BalsamiqSans-Regular.eot');
+    src: url('api_fonts/BalsamiqSans-Regular.otf');
+    src: url('api_fonts/BalsamiqSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'apiFontBold';
+    src: url('api_fonts/BalsamiqSans-Bold.eot');
+    src: url('api_fonts/BalsamiqSans-Bold.otf');
+    src: url('api_fonts/BalsamiqSans-Bold.ttf');
+}
+

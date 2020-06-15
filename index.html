@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="apiProject.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Project</title>
 </head>
 <body>
-    <h1>What are you Craving?</h1>
-    <form action="">
-        <input type="text" placeholder="Keyword" id="keyword" required>
-        <select name="" id="ingredient-number">
-            <option value="default">Ingredient Limit</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="default">No Limit</option>
-        </select>
-        <select name="" id="diet-type">
-            <option value="default">Diet Preference</option>
-            <option value="balanced">Balanced</option>
-            <option value="high-protein">High-Protein</option>
-            <option value="high-fiber">High-Fiber</option>
-            <option value="low-fat">Low-Fat</option>
-            <option value="low-carb">Low-Carb</option>
-            <option value="low-sodium">Low-Sodium</option>
-        </select>  
-        <select name="" id="health-type">
-            <option value="default">Health Restrictions</option>
-            <option value="wheat-free">Wheat-Free</option>
-            <option value="peanut-free">Peanut-Free</option>
-            <option value="soy-free">Soy-Free</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-            <option value="paleo">Paleo</option>
-        </select>
-        <input type="submit" value="Submit" id="submit">
-    </form>   
-    
+    <div class="wrapper">
+    <div id="form">
+        <h1>What are you Craving?</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <input type="text" placeholder="Keyword" id="keyword" class="form-control" required>
+                </div> 
+            </div> 
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <select name="" id="ingredient-number" class="form-control">
+                        <option value="default">Ingredient Limit</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="default">No Limit</option>
+                    </select>
+                </div>
+                <div class="form-group col-4">
+                    <select name="" id="diet-type" class="form-control">
+                        <option value="default">Diet Preference</option>
+                        <option value="balanced">Balanced</option>
+                        <option value="high-protein">High-Protein</option>
+                        <option value="high-fiber">High-Fiber</option>
+                        <option value="low-fat">Low-Fat</option>
+                        <option value="low-carb">Low-Carb</option>
+                        <option value="low-sodium">Low-Sodium</option>
+                    </select> 
+                </div>
+                <div class="form-group col-4">
+                    <select name="" id="health-type" class="form-control">
+                        <option value="default">Health Restrictions</option>
+                        <option value="wheat-free">Wheat-Free</option>
+                        <option value="peanut-free">Peanut-Free</option>
+                        <option value="soy-free">Soy-Free</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="paleo">Paleo</option>
+                    </select>
+                </div>
+              
+                    <input type="submit" value="Submit" id="submit" class="form-control">
+              
+            </div>
+        </form> 
+    </div> 
+    </div>
+    <!--Results Navigation-->
+
     <section></section>
 
 

@@ -11,7 +11,12 @@ const health = document.querySelector('#health-type');
 const submit = document.querySelector('#submit');
 const keyword = document.querySelector('#keyword');
 const searchForm = document.querySelector('form');
+//RESULTS NAV
+
+//RESULTS SECTION
 const section = document.querySelector('section');
+
+
 
 
 searchForm.addEventListener('submit', fetchResults); 
@@ -75,10 +80,10 @@ function displayResults(json){
                         link.textContent = current.recipe.label;
                         console.log(link.textContent);
                         console.log(link.href);
-                        para.textContent = 'Calories: ';
+                        para.textContent = 'Ingredients: ';
 
                         let span = document.createElement('span');
-                        span.textContent += current.recipe.calories; 
+                        span.textContent += current.recipe.ingredients[0].text + ", " + current.recipe.ingredients[1].text + " . . ."; 
                         para.appendChild(span);
                         
                         img.src = current.recipe.image;
@@ -96,3 +101,4 @@ function displayResults(json){
                 } //end of for loop running through results
         }
 }
+
