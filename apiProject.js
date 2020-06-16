@@ -16,7 +16,21 @@ const searchForm = document.querySelector('form');
 //RESULTS SECTION
 const section = document.querySelector('section');
 
+//scroll to top function & button
+var mybutton = document.getElementById("myBtn");
+function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0; }
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
 
 searchForm.addEventListener('submit', fetchResults); 
@@ -58,9 +72,9 @@ function displayResults(json){
         let recipes = json.hits;
         console.log(recipes);
 
-        // while (section.firstChild){
-        //         section.removeChild(section.firstChild); //clears previous search results
-        // }
+        while (section.firstChild){
+          section.removeChild(section.firstChild); //clears previous search results
+        }
 
         if(recipes.length === 0){
                 console.log("No Results")//need to show this one PAGE!!
@@ -94,7 +108,7 @@ function displayResults(json){
                         article.appendChild(heading);  //adds all elements to the page
                         heading.appendChild(link);
                         article.appendChild(img);
-                        article.appendChild(para);
+                        heading.appendChild(para);
                         article.appendChild(clearfix);
                         section.appendChild(article);
 
