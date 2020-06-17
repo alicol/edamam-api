@@ -66,6 +66,14 @@ function fetchResults(e){
         })      .then(function(json){
                 displayResults(json);
         })
+                .catch((error) => {
+                console.error('Error:', error);
+                let article = document.createElement('article');
+                let heading = document.createElement('h2');
+                heading.textContent = "Sorry, something went wrong :(";
+                section.appendChild(article);
+                article.appendChild(heading);
+              });
 } //end of fetchResults()
 
 function displayResults(json){
@@ -77,6 +85,11 @@ function displayResults(json){
         }
 
         if(recipes.length === 0){
+                let article = document.createElement('article');
+                let heading = document.createElement('h2');
+                heading.textContent = "No Results...try something else!";
+                section.appendChild(article);
+                article.appendChild(heading);
                 console.log("No Results")//need to show this one PAGE!!
         } else {
                 for(let i = 0; i < recipes.length; i++){

@@ -4,7 +4,7 @@
     background-size: cover;
     height: 80vh;
     width: 90vw;
-    border-radius: 5px;
+    border-radius: 9px;
     padding: 3vh;
     margin: 0 auto;
     margin-top: 5vh;
@@ -52,7 +52,7 @@ input {
 
 article {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 9px;
     width: 80vw;
     height: 60vh;
     /* margin-top: 15vh; */
@@ -64,7 +64,7 @@ article {
 }
 
 article img {
-    border-radius: 5px;
+    border-radius: 8px;
     margin-left: 5vh;
     order: 0;
     height: 50vh;
@@ -75,6 +75,7 @@ article img {
 article h2 {
     order: 1;
     margin: 6vh;
+    text-align: center;
 }
 article p {
     font-size: 3vh;
