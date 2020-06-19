@@ -105,13 +105,16 @@ function displayResults(json){
 
                         link.href = current.recipe.url;
                         link.textContent = current.recipe.label;
+                        link.target = "blank";
                         console.log(link.textContent);
                         console.log(link.href);
-                        para.textContent = 'Ingredients: ';
+                        // para.textContent = 'Ingredients: ';
 
-                        let span = document.createElement('span');
-                        span.textContent += current.recipe.ingredients[0].text + ", " + current.recipe.ingredients[1].text + " . . ."; 
-                        para.appendChild(span);
+                        // let span = document.createElement('span');
+                        // span.textContent += current.recipe.ingredients[0].text + ", " + current.recipe.ingredients[1].text + " . . ."; 
+                        // para.appendChild(span);
+
+                        
                         
                         img.src = current.recipe.image;
                         console.log(img.src);
@@ -122,8 +125,46 @@ function displayResults(json){
                         heading.appendChild(link);
                         article.appendChild(img);
                         heading.appendChild(para);
+                      
                         article.appendChild(clearfix);
                         section.appendChild(article);
+
+                        let container = document.createElement('div')
+                        let buttonHtml = `<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ingredients </button>`;
+                        let divone = document.createElement('div');
+                        container.className = "container";
+                        divone.className = "dropdown";
+                        divone.innerHTML = buttonHtml;
+                        let divtwo = document.createElement('div');      
+                        divtwo.className = "dropdown-menu";
+                        para.appendChild(container)
+                        container.appendChild(divone);
+                        divone.appendChild(divtwo);
+                        //ingredient dropdown iteration
+                       
+                        for(let h=0; h < current.recipe.ingredients.length; h++){
+                                console.log(current.recipe.ingredients[h].text);
+                                //creating dropdown div and giving class for bootstrap
+                                
+                                
+                                
+                                let ingredientElement = document.createElement('a');
+                                ingredientElement.className = "dropdown-item disabled";
+                                ingredientElement.href = "#";
+
+                                let ingredientText = document.createTextNode('Hello World');
+                                ingredientElement.appendChild(ingredientText);
+
+                                ingredientElement.textContent = current.recipe.ingredients[h].text;
+                                console.log("hi", ingredientElement.textContent)
+                                
+                               
+                                divtwo.appendChild(ingredientElement);
+                        }
+
+
+
 
                 } //end of for loop running through results
         }
