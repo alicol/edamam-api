@@ -121,6 +121,9 @@ function displayResults(json){
 
                         clearfix.setAttribute('class', 'clearfix'); //clearfix clears child elements
 
+                        //creating div for heading and ingredient dropdown flexbox
+                        let flexdiv = document.createElement('div');
+
                         article.appendChild(heading);  //adds all elements to the page
                         heading.appendChild(link);
                         article.appendChild(img);
@@ -153,8 +156,8 @@ function displayResults(json){
                                 ingredientElement.className = "dropdown-item disabled";
                                 ingredientElement.href = "#";
 
-                                let ingredientText = document.createTextNode('Hello World');
-                                ingredientElement.appendChild(ingredientText);
+                                // let ingredientText = document.createTextNode('Hello World');
+                                // ingredientElement.appendChild(ingredientText);
 
                                 ingredientElement.textContent = current.recipe.ingredients[h].text;
                                 console.log("hi", ingredientElement.textContent)

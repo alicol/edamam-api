@@ -64,7 +64,29 @@
         &#8593
     </button>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBn99N13tNGQQMt0aHCJWUon54Xu01JTNE",
+    authDomain: "recipe-api-fce2b.firebaseapp.com",
+    databaseURL: "https://recipe-api-fce2b.firebaseio.com",
+    projectId: "recipe-api-fce2b",
+    storageBucket: "recipe-api-fce2b.appspot.com",
+    messagingSenderId: "9338294703",
+    appId: "1:9338294703:web:127f771120096748eb5f5a",
+    measurementId: "G-Y20S6H7NWC"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 <script type="text/javascript" src="apiProject.js"></script>
 <!-- Boostrap Links Below -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
